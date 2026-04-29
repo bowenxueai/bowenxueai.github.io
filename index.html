@@ -3,300 +3,761 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bowen Xue - Ph.D. Candidate</title>
+    <title>Bowen Xue</title>
+    <meta name="description" content="Bowen Xue is a Ph.D. candidate at the University of Manchester working on neural rendering, neural materials, SVBRDF generation, diffusion models, and video generation.">
+    <meta name="author" content="Bowen Xue">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="Bowen Xue, neural rendering, neural materials, SVBRDF, material synthesis, diffusion models, computer graphics, VideoNeuMat">
+    <link rel="canonical" href="https://bowenxueai.github.io/">
+    <meta property="og:title" content="Bowen Xue">
+    <meta property="og:description" content="Ph.D. candidate in Computer Science at the University of Manchester. Research in neural rendering, neural materials, material synthesis, and video generation.">
+    <meta property="og:type" content="profile">
+    <meta property="og:url" content="https://bowenxueai.github.io/">
+    <meta property="og:image" content="https://bowenxueai.github.io/assets/videoneumat_teaser.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Bowen Xue",
+        "url": "https://bowenxueai.github.io/",
+        "affiliation": {
+            "@type": "CollegeOrUniversity",
+            "name": "University of Manchester"
+        },
+        "jobTitle": "Ph.D. Candidate in Computer Science",
+        "email": "mailto:bowen.xue@postgrad.manchester.ac.uk",
+        "sameAs": [
+            "https://github.com/bowenxueai",
+            "https://scholar.google.com/citations?user=AuyaagEAAAAJ&hl=en"
+        ],
+        "knowsAbout": [
+            "Computer graphics",
+            "Neural rendering",
+            "Neural materials",
+            "SVBRDF generation",
+            "Diffusion models",
+            "Video generation"
+        ]
+    }
+    </script>
     <style>
+        :root {
+            --bg: #f7f7f4;
+            --paper: #ffffff;
+            --ink: #202124;
+            --muted: #666f7a;
+            --line: #d9ded9;
+            --accent: #245c8a;
+            --accent-dark: #163d5e;
+            --accent-soft: #e7f0f7;
+            --warm: #8a4b2b;
+            --warm-soft: #f4ece4;
+            --green: #3c6858;
+            --shadow: 0 18px 45px rgba(26, 34, 44, 0.08);
+        }
+
         * {
-            margin: 0;
-            padding: 0;
             box-sizing: border-box;
         }
-        
+
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f8f9fa;
+            margin: 0;
+            color: var(--ink);
+            background: var(--bg);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.62;
         }
-        
-        .container {
-            max-width: 900px;
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: var(--accent-dark);
+            text-decoration: underline;
+        }
+
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            border-bottom: 1px solid rgba(32, 33, 36, 0.08);
+            background: rgba(247, 247, 244, 0.92);
+            backdrop-filter: blur(14px);
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1180px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 14px 28px;
         }
-        
-        header {
-            background-color: #fff;
-            padding: 40px;
-            margin-bottom: 30px;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            text-align: center;
+
+        .brand {
+            color: var(--ink);
+            font-weight: 700;
+            letter-spacing: 0;
         }
-        
-        h1 {
-            color: #2c3e50;
-            font-size: 2.5em;
-            margin-bottom: 10px;
+
+        .nav-links {
+            display: flex;
+            gap: 18px;
+            align-items: center;
+            font-size: 0.94rem;
         }
-        
-        h2 {
-            color: #34495e;
-            font-size: 1.8em;
-            margin-top: 30px;
-            margin-bottom: 20px;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 10px;
+
+        .page {
+            display: grid;
+            grid-template-columns: 300px minmax(0, 1fr);
+            gap: 44px;
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 46px 28px 64px;
         }
-        
-        .contact-info {
-            color: #7f8c8d;
-            font-size: 1.1em;
-            margin-top: 15px;
+
+        .profile {
+            align-self: start;
+            position: sticky;
+            top: 78px;
         }
-        
-        .contact-info a {
-            color: #3498db;
-            text-decoration: none;
+
+        .portrait {
+            display: grid;
+            place-items: center;
+            width: 160px;
+            height: 160px;
+            margin-bottom: 24px;
+            border: 1px solid var(--line);
+            border-radius: 50%;
+            background:
+                linear-gradient(135deg, rgba(36, 92, 138, 0.16), rgba(138, 75, 43, 0.16)),
+                var(--paper);
+            color: var(--accent-dark);
+            font-size: 3.1rem;
+            font-weight: 750;
+            box-shadow: var(--shadow);
         }
-        
-        .contact-info a:hover {
-            text-decoration: underline;
+
+        .profile h1 {
+            margin: 0 0 6px;
+            font-size: 2.25rem;
+            line-height: 1.1;
         }
-        
-        .links {
-            margin-top: 20px;
+
+        .role {
+            margin: 0 0 16px;
+            color: var(--muted);
+            font-size: 1.02rem;
         }
-        
-        .links a {
-            display: inline-block;
-            margin: 0 10px;
-            padding: 8px 16px;
-            background-color: #3498db;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s;
+
+        .profile-meta {
+            display: grid;
+            gap: 7px;
+            margin: 18px 0 22px;
+            color: var(--muted);
+            font-size: 0.95rem;
         }
-        
-        .links a:hover {
-            background-color: #2980b9;
-        }
-        
-        .section {
-            background-color: #fff;
-            padding: 30px;
-            margin-bottom: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        
-        .publication {
-            margin-bottom: 25px;
-            padding: 15px;
-            background-color: #f8f9fa;
-            border-left: 4px solid #3498db;
-            border-radius: 5px;
-        }
-        
-        .publication-title {
-            font-weight: bold;
-            color: #2c3e50;
-            margin-bottom: 5px;
-            font-size: 1.1em;
-        }
-        
-        .publication-authors {
-            color: #7f8c8d;
-            font-size: 0.95em;
-            margin-bottom: 5px;
-        }
-        
-        .publication-venue {
-            color: #16a085;
-            font-style: italic;
-            margin-bottom: 8px;
-        }
-        
-        .publication-links a {
-            color: #3498db;
-            text-decoration: none;
-            margin-right: 15px;
-            font-size: 0.9em;
-        }
-        
-        .publication-links a:hover {
-            text-decoration: underline;
-        }
-        
-        .education-item {
-            margin-bottom: 20px;
-        }
-        
-        .date {
-            color: #7f8c8d;
-            font-weight: bold;
-        }
-        
-        .institution {
-            color: #2c3e50;
-            font-weight: bold;
-            font-size: 1.1em;
-        }
-        
-        .research-interests {
+
+        .profile-actions {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
-            margin-top: 15px;
+            margin-bottom: 24px;
         }
-        
-        .interest-tag {
-            background-color: #ecf0f1;
-            padding: 5px 15px;
-            border-radius: 20px;
-            color: #34495e;
-            font-size: 0.9em;
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 38px;
+            padding: 8px 13px;
+            border: 1px solid var(--line);
+            border-radius: 6px;
+            background: var(--paper);
+            color: var(--ink);
+            font-size: 0.92rem;
+            font-weight: 650;
+            text-decoration: none;
+            box-shadow: 0 8px 18px rgba(26, 34, 44, 0.05);
         }
-        
-        .bio {
-            font-size: 1.05em;
-            line-height: 1.8;
-            color: #555;
+
+        .button:hover {
+            border-color: rgba(36, 92, 138, 0.45);
+            color: var(--accent-dark);
+            text-decoration: none;
         }
-        
-        @media (max-width: 768px) {
-            .container {
-                padding: 10px;
+
+        .button.primary {
+            border-color: var(--accent);
+            background: var(--accent);
+            color: #ffffff;
+        }
+
+        .button.primary:hover {
+            background: var(--accent-dark);
+            color: #ffffff;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tag {
+            border: 1px solid var(--line);
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.74);
+            color: #38424c;
+            padding: 5px 10px;
+            font-size: 0.83rem;
+            line-height: 1.25;
+        }
+
+        main {
+            min-width: 0;
+        }
+
+        .intro {
+            padding: 34px 0 18px;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .kicker {
+            margin: 0 0 10px;
+            color: var(--green);
+            font-size: 0.82rem;
+            font-weight: 750;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .intro h2 {
+            max-width: 800px;
+            margin: 0;
+            font-size: 2.32rem;
+            line-height: 1.18;
+            letter-spacing: 0;
+        }
+
+        .intro p {
+            max-width: 760px;
+            margin: 18px 0 0;
+            color: var(--muted);
+            font-size: 1.06rem;
+        }
+
+        .section {
+            padding: 34px 0;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .section-title {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            gap: 18px;
+            margin-bottom: 18px;
+        }
+
+        .section-title h2 {
+            margin: 0;
+            font-size: 1.35rem;
+            letter-spacing: 0;
+        }
+
+        .section-title span {
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        .featured {
+            display: grid;
+            grid-template-columns: minmax(260px, 0.86fr) 1fr;
+            gap: 24px;
+            align-items: center;
+            padding: 18px;
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            background: var(--paper);
+            box-shadow: var(--shadow);
+        }
+
+        .featured img {
+            display: block;
+            width: 100%;
+            aspect-ratio: 16 / 10;
+            object-fit: cover;
+            border-radius: 6px;
+            border: 1px solid rgba(32, 33, 36, 0.08);
+            background: #eeeeea;
+        }
+
+        .featured h3 {
+            margin: 0 0 8px;
+            font-size: 1.24rem;
+            line-height: 1.28;
+        }
+
+        .venue {
+            margin: 0 0 8px;
+            color: var(--warm);
+            font-weight: 700;
+        }
+
+        .authors {
+            margin: 0 0 12px;
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        .summary {
+            margin: 0 0 16px;
+            color: #424b55;
+        }
+
+        .link-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .paper-list {
+            display: grid;
+            gap: 16px;
+        }
+
+        .paper {
+            display: grid;
+            grid-template-columns: 112px minmax(0, 1fr);
+            gap: 18px;
+            padding: 18px 0;
+        }
+
+        .paper + .paper {
+            border-top: 1px solid rgba(32, 33, 36, 0.1);
+        }
+
+        .year {
+            color: var(--accent-dark);
+            font-weight: 800;
+            font-size: 0.95rem;
+        }
+
+        .paper h3 {
+            margin: 0 0 5px;
+            font-size: 1.06rem;
+            line-height: 1.35;
+        }
+
+        .paper p {
+            margin: 0 0 7px;
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        .paper .links a {
+            margin-right: 14px;
+            font-size: 0.92rem;
+            font-weight: 650;
+        }
+
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 26px;
+        }
+
+        .timeline {
+            display: grid;
+            gap: 16px;
+        }
+
+        .item {
+            padding: 16px;
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.68);
+        }
+
+        .item h3 {
+            margin: 0 0 4px;
+            font-size: 1rem;
+        }
+
+        .item p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 16px;
+        }
+
+        .note {
+            margin: 18px 0 0;
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        footer {
+            padding: 26px 0 0;
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 920px) {
+            .page {
+                grid-template-columns: 1fr;
+                gap: 18px;
             }
-            
-            header {
-                padding: 30px 20px;
+
+            .profile {
+                position: static;
+                display: grid;
+                grid-template-columns: 120px minmax(0, 1fr);
+                column-gap: 22px;
+                align-items: center;
             }
-            
-            h1 {
-                font-size: 2em;
+
+            .portrait {
+                width: 120px;
+                height: 120px;
+                margin-bottom: 0;
+                font-size: 2.35rem;
             }
-            
-            .links a {
+
+            .profile h1,
+            .role,
+            .profile-meta,
+            .profile-actions,
+            .tags {
+                grid-column: 2;
+            }
+
+            .profile h1 {
+                grid-row: 1;
+            }
+
+            .role {
+                grid-row: 2;
+            }
+
+            .profile-meta {
+                grid-row: 3;
+                margin: 10px 0 14px;
+            }
+
+            .profile-actions {
+                grid-row: 4;
+            }
+
+            .tags {
+                grid-row: 5;
+            }
+
+            .intro h2 {
+                font-size: 1.9rem;
+            }
+
+            .featured,
+            .two-col {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 620px) {
+            .nav {
+                align-items: flex-start;
+                flex-direction: column;
+                gap: 10px;
+                padding: 13px 18px;
+            }
+
+            .nav-links {
+                width: 100%;
+                gap: 12px;
+                overflow-x: auto;
+                padding-bottom: 2px;
+            }
+
+            .page {
+                padding: 30px 18px 48px;
+            }
+
+            .profile {
                 display: block;
-                margin: 5px 0;
+            }
+
+            .portrait {
+                width: 112px;
+                height: 112px;
+                margin-bottom: 18px;
+                font-size: 2.15rem;
+            }
+
+            .profile-actions {
+                margin-bottom: 18px;
+            }
+
+            .intro {
+                padding-top: 16px;
+            }
+
+            .intro h2 {
+                font-size: 1.58rem;
+            }
+
+            .section-title {
+                display: block;
+            }
+
+            .section-title span {
+                display: block;
+                margin-top: 4px;
+            }
+
+            .featured {
+                padding: 14px;
+            }
+
+            .paper {
+                grid-template-columns: 1fr;
+                gap: 6px;
+            }
+
+            .service-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
+    <header class="site-header">
+        <nav class="nav" aria-label="Primary">
+            <a class="brand" href="/">Bowen Xue</a>
+            <div class="nav-links">
+                <a href="#research">Research</a>
+                <a href="#publications">Publications</a>
+                <a href="#experience">Experience</a>
+                <a href="#cv">CV</a>
+                <a href="https://bowenxueai.github.io/VideoNeuMat/">VideoNeuMat</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="page">
+        <aside class="profile" aria-label="Profile">
+            <div class="portrait" aria-hidden="true">BX</div>
             <h1>Bowen Xue</h1>
-            <p style="font-size: 1.3em; color: #7f8c8d; margin-bottom: 10px;">Ph.D. Candidate in Computer Science</p>
-            <p style="font-size: 1.1em; color: #7f8c8d;">University of Manchester</p>
-            <div class="contact-info">
-                <p><a href="mailto:bowen.xue@postgrad.manchester.ac.uk">bowen.xue@postgrad.manchester.ac.uk</a></p>
+            <p class="role">Ph.D. Candidate in Computer Science<br>University of Manchester</p>
+            <div class="profile-meta">
+                <span>Computer Graphics and Neural Rendering</span>
+                <span>Manchester, United Kingdom</span>
+                <a href="mailto:bowen.xue@postgrad.manchester.ac.uk">bowen.xue@postgrad.manchester.ac.uk</a>
             </div>
-            <div class="links">
-                <a href="https://github.com/yley123" target="_blank">GitHub</a>
-                <a href="https://scholar.google.com/citations?user=AuyaagEAAAAJ&hl=en" target="_blank">Google Scholar</a>
-                <a href="cv.pdf" target="_blank">CV</a>
+            <div class="profile-actions">
+                <a class="button primary" href="https://bowenxueai.github.io/VideoNeuMat/">Project</a>
+                <a class="button" href="https://scholar.google.com/citations?user=AuyaagEAAAAJ&hl=en" target="_blank" rel="noopener">Scholar</a>
+                <a class="button" href="https://github.com/bowenxueai" target="_blank" rel="noopener">GitHub</a>
             </div>
-        </header>
-        
-        <div class="section">
-            <h2>About</h2>
-            <p class="bio">
-                I am a Ph.D. candidate at the University of Manchester, working on neural rendering and computer graphics. 
-                My research focuses on developing physics-informed approaches for material synthesis and video generation, 
-                with particular interests in SVBRDF generation, neural materials, and diffusion models. 
-                I have published at EGSR and Computer Graphics Forum.
-            </p>
-        </div>
-        
-        <div class="section">
-            <h2>Research Interests</h2>
-            <div class="research-interests">
-                <span class="interest-tag">Neural Rendering</span>
-                <span class="interest-tag">Material Synthesis</span>
-                <span class="interest-tag">Diffusion Models</span>
-                <span class="interest-tag">Video Generation</span>
-                <span class="interest-tag">Physically-Based Rendering</span>
-                <span class="interest-tag">Computer Graphics</span>
+            <div class="tags" aria-label="Research interests">
+                <span class="tag">Neural materials</span>
+                <span class="tag">SVBRDF</span>
+                <span class="tag">Video diffusion</span>
+                <span class="tag">Inverse rendering</span>
+                <span class="tag">Physically based rendering</span>
             </div>
-        </div>
-        
-        <div class="section">
-            <h2>Publications</h2>
-            
-            <div class="publication">
-                <div class="publication-title">Motion Aware Video Generative Model</div>
-                <div class="publication-authors">Bowen Xue, Giuseppe Claudio Guarnera, Shuang Zhao, Zahra Montazeri</div>
-                <div class="publication-venue">arXiv preprint, 2025</div>
-                <div class="publication-links">
-                    <a href="https://arxiv.org/abs/2506.02244" target="_blank">[Paper]</a>
+        </aside>
+
+        <main>
+            <section class="intro" id="research">
+                <p class="kicker">Research</p>
+                <h2>Neural material generation and inverse rendering for graphics assets.</h2>
+                <p>
+                    I work on computer graphics, neural rendering, and generative models, with a focus on extracting and synthesizing physically meaningful material appearance from images and videos. My recent research studies how generative video models can be used as material priors for 3D asset creation.
+                </p>
+            </section>
+
+            <section class="section" aria-labelledby="featured-heading">
+                <div class="section-title">
+                    <h2 id="featured-heading">Featured Project</h2>
+                    <span>ACM SIGGRAPH 2026</span>
                 </div>
-            </div>
-            
-            <div class="publication">
-                <div class="publication-title">Diffusion-based G-buffer Generation and Rendering</div>
-                <div class="publication-authors">Bowen Xue, Giuseppe Claudio Guarnera, Shuang Zhao, Zahra Montazeri</div>
-                <div class="publication-venue">arXiv preprint, 2024</div>
-                <div class="publication-links">
-                    <a href="https://arxiv.org/abs/2503.15147" target="_blank">[Paper]</a>
+                <article class="featured">
+                    <a href="https://bowenxueai.github.io/VideoNeuMat/">
+                        <img src="assets/videoneumat_teaser.jpg" alt="VideoNeuMat examples showing reconstructed neural materials from generative video models">
+                    </a>
+                    <div>
+                        <h3>VideoNeuMat: Neural Material Extraction from Generative Video Models</h3>
+                        <p class="venue">ACM SIGGRAPH 2026</p>
+                        <p class="authors">Bowen Xue, Saeed Hadadan, Zheng Zeng, Fabrice Rousselle, Zahra Montazeri, Milos Hasan</p>
+                        <p class="summary">
+                            VideoNeuMat reconstructs neural materials from generative video observations, enabling high-resolution appearance, relighting, and geometry-aware material transfer for graphics workflows.
+                        </p>
+                        <div class="link-row">
+                            <a class="button primary" href="https://bowenxueai.github.io/VideoNeuMat/">Project page</a>
+                            <a class="button" href="https://github.com/bowenxueai/VideoNeuMat/releases/download/full-resolution/VideoNeuMat_SIG_2026_full_resolution.pdf" target="_blank" rel="noopener">Paper</a>
+                            <a class="button" href="https://github.com/bowenxueai/VideoNeuMat" target="_blank" rel="noopener">Code</a>
+                        </div>
+                    </div>
+                </article>
+            </section>
+
+            <section class="section" id="publications" aria-labelledby="publications-heading">
+                <div class="section-title">
+                    <h2 id="publications-heading">Selected Publications</h2>
+                    <span>Graphics, materials, and generative models</span>
                 </div>
-            </div>
-            
-            <div class="publication">
-                <div class="publication-title">ReflectanceFusion: Diffusion-based Text to SVBRDF Generation</div>
-                <div class="publication-authors">Bowen Xue, Giuseppe Claudio Guarnera, Shuang Zhao, Zahra Montazeri</div>
-                <div class="publication-venue">Eurographics Symposium on Rendering (EGSR), 2023</div>
-                <div class="publication-links">
-                    <a href="https://diglib.eg.org/items/bd1075f3-4f4b-410f-9159-2143b4e97e82" target="_blank">[Paper]</a>
-                    <a href="https://github.com/yley123/ReflectanceFusion-Diffusion-based-text-to-SVBRDF-Generation" target="_blank">[Code]</a>
+                <div class="paper-list">
+                    <article class="paper">
+                        <div class="year">2026</div>
+                        <div>
+                            <h3>VideoNeuMat: Neural Material Extraction from Generative Video Models</h3>
+                            <p>Bowen Xue, Saeed Hadadan, Zheng Zeng, Fabrice Rousselle, Zahra Montazeri, Milos Hasan</p>
+                            <p><strong>ACM SIGGRAPH 2026</strong></p>
+                            <div class="links">
+                                <a href="https://bowenxueai.github.io/VideoNeuMat/">Project</a>
+                                <a href="https://github.com/bowenxueai/VideoNeuMat/releases/download/full-resolution/VideoNeuMat_SIG_2026_full_resolution.pdf" target="_blank" rel="noopener">Paper</a>
+                                <a href="https://github.com/bowenxueai/VideoNeuMat" target="_blank" rel="noopener">Code</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="paper">
+                        <div class="year">2026</div>
+                        <div>
+                            <h3>Motion Aware Video Generation Model</h3>
+                            <p>Bowen Xue, Giuseppe Claudio Guarnera, Shuang Zhao, Zahra Montazeri</p>
+                            <p><strong>arXiv preprint</strong></p>
+                            <div class="links">
+                                <a href="https://arxiv.org/abs/2506.02244" target="_blank" rel="noopener">Paper</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="paper">
+                        <div class="year">2026</div>
+                        <div>
+                            <h3>PBR-Inspired Controllable Diffusion for Image Generation</h3>
+                            <p>Bowen Xue, Giuseppe Claudio Guarnera, Shuang Zhao, Zahra Montazeri</p>
+                            <p><strong>Computer Graphics Forum, Eurographics 2026</strong></p>
+                            <div class="links">
+                                <a href="https://arxiv.org/abs/2503.15147" target="_blank" rel="noopener">Paper</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="paper">
+                        <div class="year">2024</div>
+                        <div>
+                            <h3>ReflectanceFusion: Diffusion-based Text to SVBRDF Generation</h3>
+                            <p>Bowen Xue, Giuseppe Claudio Guarnera, Shuang Zhao, Zahra Montazeri</p>
+                            <p><strong>Eurographics Symposium on Rendering</strong></p>
+                            <div class="links">
+                                <a href="https://diglib.eg.org/items/bd1075f3-4f4b-410f-9159-2143b4e97e82" target="_blank" rel="noopener">Paper</a>
+                                <a href="https://github.com/bowenxueai/ReflectanceFusion-Diffusion-based-text-to-SVBRDF-Generation" target="_blank" rel="noopener">Code</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="paper">
+                        <div class="year">2024</div>
+                        <div>
+                            <h3>A Hierarchical Architecture for Neural Materials</h3>
+                            <p>Bowen Xue, Shuang Zhao, Henrik Wann Jensen, Zahra Montazeri</p>
+                            <p><strong>Computer Graphics Forum, 43(6)</strong></p>
+                            <div class="links">
+                                <a href="https://onlinelibrary.wiley.com/doi/10.1111/cgf.15116?af=R" target="_blank" rel="noopener">Paper</a>
+                                <a href="https://github.com/bowenxueai/A-Hierarchical-Architecture-for-Neural-Materials" target="_blank" rel="noopener">Code</a>
+                            </div>
+                        </div>
+                    </article>
                 </div>
-            </div>
-            
-            <div class="publication">
-                <div class="publication-title">A Hierarchical Architecture for Neural Materials</div>
-                <div class="publication-authors">Bowen Xue, Shuang Zhao, Henrik Wann Jensen, Zahra Montazeri</div>
-                <div class="publication-venue">Computer Graphics Forum, 2023</div>
-                <div class="publication-links">
-                    <a href="https://onlinelibrary.wiley.com/doi/10.1111/cgf.15116?af=R" target="_blank">[Paper]</a>
-                    <a href="https://github.com/yley123/A-Hierarchical-Architecture-for-Neural-Materials" target="_blank">[Code]</a>
+            </section>
+
+            <section class="section" id="experience" aria-labelledby="experience-heading">
+                <div class="section-title">
+                    <h2 id="experience-heading">Experience</h2>
+                    <span>Research and industry</span>
                 </div>
-            </div>
-        </div>
-        
-        <div class="section">
-            <h2>Education</h2>
-            <div class="education-item">
-                <div class="institution">University of Manchester</div>
-                <p>Ph.D. in Computer Science, <span class="date">2022 - Present</span></p>
-                <p style="color: #7f8c8d;">University of Manchester Scholarship</p>
-            </div>
-            <div class="education-item">
-                <div class="institution">University of Nottingham</div>
-                <p>MSc Electronic Communications and Computer Engineering, <span class="date">2019 - 2020</span></p>
-                <p style="color: #7f8c8d;">Distinction, GPA 4.0 (Top 5%)</p>
-            </div>
-            <div class="education-item">
-                <div class="institution">University of Electronic Science and Technology of China</div>
-                <p>Bachelor of Engineering in Communication Engineering, <span class="date">2014 - 2018</span></p>
-            </div>
-        </div>
-        
-        <div class="section">
-            <h2>Selected Experience</h2>
-            <div class="education-item">
-                <div class="institution">Lumirithmic (London)</div>
-                <p>Research Intern - Neural Facial Research with L'ORÉAL, <span class="date">2025</span></p>
-            </div>
-            <div class="education-item">
-                <div class="institution">Autowise.ai</div>
-                <p>Autonomous Vehicle Engineer, <span class="date">2023 - 2024</span></p>
-            </div>
-            <div class="education-item">
-                <div class="institution">Teaching Assistant</div>
-                <p>University of Manchester - GTA Teaching Award, <span class="date">2022 - Present</span></p>
-            </div>
-        </div>
+                <div class="timeline">
+                    <article class="item">
+                        <h3>NVIDIA</h3>
+                        <p>3D asset generation using video diffusion models, 2026.</p>
+                    </article>
+                    <article class="item">
+                        <h3>Lumirithmic, London</h3>
+                        <p>Research intern on facial subsurface scattering, Monte Carlo rendering, and diffusion-based inverse modeling, 2025-2026.</p>
+                    </article>
+                    <article class="item">
+                        <h3>Autowise.ai, UK</h3>
+                        <p>Autonomous vehicle testing and research internship, 2023-2024.</p>
+                    </article>
+                    <article class="item">
+                        <h3>Drone Defence Ltd, UK</h3>
+                        <p>GPU-enabled wide-bandwidth RF sensor for an AI anti-drone platform, 2020.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="section" id="cv" aria-labelledby="cv-heading">
+                <div class="section-title">
+                    <h2 id="cv-heading">Education and Service</h2>
+                    <span>CV summary</span>
+                </div>
+                <div class="two-col">
+                    <div class="timeline">
+                        <article class="item">
+                            <h3>University of Manchester</h3>
+                            <p>Ph.D. in Computer Science, 2022-present. University of Manchester Scholarship.</p>
+                        </article>
+                        <article class="item">
+                            <h3>University of Nottingham</h3>
+                            <p>MSc Electronic Communications and Computer Engineering, Distinction, GPA 4.0, 2019-2020.</p>
+                        </article>
+                        <article class="item">
+                            <h3>University of Electronic Science and Technology of China</h3>
+                            <p>BEng Communication Engineering, 2014-2018.</p>
+                        </article>
+                    </div>
+                    <div class="service-grid">
+                        <article class="item">
+                            <h3>Academic Service</h3>
+                            <p>Reviewer for Eurographics, SIGGRAPH, SIGGRAPH Asia, and Swarm and Evolutionary Computation.</p>
+                        </article>
+                        <article class="item">
+                            <h3>Teaching</h3>
+                            <p>Graduate teaching assistant at the University of Manchester. GTA Teaching Award, 2024.</p>
+                        </article>
+                        <article class="item">
+                            <h3>Membership</h3>
+                            <p>Associate Fellow, Higher Education Academy, UK.</p>
+                        </article>
+                        <article class="item">
+                            <h3>Honors</h3>
+                            <p>University of Manchester Scholarship, Huawei ICT regional final award, and earlier programming and physics awards.</p>
+                        </article>
+                    </div>
+                </div>
+                <p class="note">Last updated: April 2026.</p>
+            </section>
+
+            <footer>
+                <p>Copyright 2026 Bowen Xue. Built as a static GitHub Pages site.</p>
+            </footer>
+        </main>
     </div>
 </body>
 </html>
