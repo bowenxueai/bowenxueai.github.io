@@ -364,44 +364,6 @@
             color: #424b55;
         }
 
-        .project-grid {
-            display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 16px;
-        }
-
-        .project-card {
-            min-height: 100%;
-            padding: 18px;
-            border: 1px solid var(--line);
-            border-radius: 8px;
-            background: rgba(255, 255, 255, 0.72);
-        }
-
-        .project-card h3 {
-            margin: 0 0 8px;
-            font-size: 1rem;
-            line-height: 1.35;
-        }
-
-        .project-card p {
-            margin: 0 0 10px;
-            color: var(--muted);
-            font-size: 0.94rem;
-        }
-
-        .project-card .label {
-            display: inline-flex;
-            align-items: center;
-            min-height: 24px;
-            padding: 3px 8px;
-            border-radius: 999px;
-            background: var(--warm-soft);
-            color: var(--warm);
-            font-size: 0.78rem;
-            font-weight: 750;
-        }
-
         .paper {
             display: grid;
             grid-template-columns: 112px minmax(0, 1fr);
@@ -539,8 +501,7 @@
             }
 
             .featured,
-            .two-col,
-            .project-grid {
+            .two-col {
                 grid-template-columns: 1fr;
             }
         }
@@ -622,7 +583,6 @@
             <a class="brand" href="/">Bowen Xue</a>
             <div class="nav-links">
                 <a href="#research">Research</a>
-                <a href="#projects">Projects</a>
                 <a href="#publications">Publications</a>
                 <a href="#experience">Experience</a>
                 <a href="#cv">CV</a>
@@ -710,33 +670,9 @@
                 </article>
             </section>
 
-            <section class="section" id="projects" aria-labelledby="projects-heading">
-                <div class="section-title">
-                    <h2 id="projects-heading">Research Projects</h2>
-                    <span>Current directions</span>
-                </div>
-                <div class="project-grid">
-                    <article class="project-card">
-                        <h3>Neural Material Generation for 3D Assets</h3>
-                        <p>Material extraction and 3D asset generation from generative video models.</p>
-                        <span class="label">NVIDIA collaboration</span>
-                    </article>
-                    <article class="project-card">
-                        <h3>Latent Spectral Editing in Video VAEs</h3>
-                        <p>Measuring feasible frequency bands for editing and controlling video latent spaces.</p>
-                        <span class="label">In preparation</span>
-                    </article>
-                    <article class="project-card">
-                        <h3>Facial Subsurface Scattering</h3>
-                        <p>Monte Carlo rendering and diffusion-based inverse modeling for facial appearance.</p>
-                        <span class="label">Lumirithmic collaboration</span>
-                    </article>
-                </div>
-            </section>
-
             <section class="section" id="publications" aria-labelledby="publications-heading">
                 <div class="section-title">
-                    <h2 id="publications-heading">Selected Publications</h2>
+                    <h2 id="publications-heading">Publications</h2>
                     <span>Graphics, materials, and generative models</span>
                 </div>
                 <div class="paper-list">
@@ -813,10 +749,6 @@
                 </div>
                 <div class="timeline">
                     <article class="item">
-                        <h3>NVIDIA</h3>
-                        <p>3D asset generation using video diffusion models, 2026.</p>
-                    </article>
-                    <article class="item">
                         <h3>Lumirithmic, London</h3>
                         <p>Research intern on facial subsurface scattering, Monte Carlo rendering, and diffusion-based inverse modeling, 2025-2026.</p>
                     </article>
@@ -840,15 +772,12 @@
                     <div class="timeline">
                         <article class="item">
                             <h3>University of Manchester</h3>
-                            <p>Ph.D. in Computer Science, 2022-present. University of Manchester Scholarship.</p>
                         </article>
                         <article class="item">
                             <h3>University of Nottingham</h3>
-                            <p>MSc Electronic Communications and Computer Engineering, Distinction, GPA 4.0, 2019-2020.</p>
                         </article>
                         <article class="item">
                             <h3>University of Electronic Science and Technology of China</h3>
-                            <p>BEng Communication Engineering, 2014-2018.</p>
                         </article>
                     </div>
                     <div class="service-grid">
@@ -863,10 +792,6 @@
                         <article class="item">
                             <h3>Membership</h3>
                             <p>Associate Fellow, Higher Education Academy, UK.</p>
-                        </article>
-                        <article class="item">
-                            <h3>Honors</h3>
-                            <p>University of Manchester Scholarship, Huawei ICT regional final award, and earlier programming and physics awards.</p>
                         </article>
                     </div>
                 </div>
