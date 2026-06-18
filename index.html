@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bowen Xue</title>
-    <meta name="description" content="Bowen Xue is a Ph.D. candidate at the University of Manchester working on neural rendering, neural materials, SVBRDF generation, diffusion models, and video generation.">
+    <meta name="description" content="Bowen Xue is a Ph.D. candidate at the University of Manchester and research intern at NVIDIA, working on neural rendering, neural materials, SVBRDF generation, diffusion models, and video generation.">
     <meta name="author" content="Bowen Xue">
     <meta name="robots" content="index, follow">
     <meta name="keywords" content="Bowen Xue, neural rendering, neural materials, SVBRDF, material synthesis, diffusion models, computer graphics, VideoNeuMat">
@@ -13,10 +13,10 @@
     <link rel="me" href="https://github.com/bowenxueai">
     <link rel="me" href="https://scholar.google.com/citations?user=AuyaagEAAAAJ&hl=en">
     <meta property="og:title" content="Bowen Xue">
-    <meta property="og:description" content="Ph.D. candidate in Computer Science at the University of Manchester. Research in neural rendering, neural materials, material synthesis, and video generation.">
+    <meta property="og:description" content="Ph.D. candidate in Computer Science at the University of Manchester and research intern at NVIDIA. Research in neural rendering, neural materials, material synthesis, and video generation.">
     <meta property="og:type" content="profile">
     <meta property="og:url" content="https://bowenxueai.github.io/">
-    <meta property="og:image" content="https://bowenxueai.github.io/assets/videoneumat_teaser.jpg">
+    <meta property="og:image" content="https://bowenxueai.github.io/assets/bowen_xue_portrait.jpg">
     <meta property="og:site_name" content="Bowen Xue">
     <meta name="twitter:card" content="summary_large_image">
     <script type="application/ld+json">
@@ -25,11 +25,15 @@
         "@type": "Person",
         "name": "Bowen Xue",
         "url": "https://bowenxueai.github.io/",
-        "image": "https://bowenxueai.github.io/assets/videoneumat_teaser.jpg",
+        "image": "https://bowenxueai.github.io/assets/bowen_xue_portrait.jpg",
         "mainEntityOfPage": "https://bowenxueai.github.io/",
         "affiliation": {
             "@type": "CollegeOrUniversity",
             "name": "University of Manchester"
+        },
+        "worksFor": {
+            "@type": "Organization",
+            "name": "NVIDIA"
         },
         "jobTitle": "Ph.D. Candidate in Computer Science",
         "email": "mailto:bowen.xue@postgrad.manchester.ac.uk",
@@ -49,18 +53,15 @@
     </script>
     <style>
         :root {
-            --bg: #f7f7f4;
+            --bg: #fbfbfa;
             --paper: #ffffff;
-            --ink: #202124;
-            --muted: #666f7a;
-            --line: #d9ded9;
-            --accent: #245c8a;
-            --accent-dark: #163d5e;
-            --accent-soft: #e7f0f7;
-            --warm: #8a4b2b;
-            --warm-soft: #f4ece4;
-            --green: #3c6858;
-            --shadow: 0 18px 45px rgba(26, 34, 44, 0.08);
+            --ink: #1f2328;
+            --muted: #5d6773;
+            --line: #e4e7eb;
+            --accent: #1f5f8f;
+            --accent-dark: #153f61;
+            --accent-soft: #eef6fb;
+            --shadow: 0 12px 30px rgba(31, 35, 40, 0.07);
         }
 
         * {
@@ -69,6 +70,7 @@
 
         html {
             scroll-behavior: smooth;
+            overflow-x: hidden;
         }
 
         body {
@@ -76,7 +78,8 @@
             color: var(--ink);
             background: var(--bg);
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.62;
+            line-height: 1.58;
+            overflow-x: hidden;
         }
 
         a {
@@ -93,8 +96,8 @@
             position: sticky;
             top: 0;
             z-index: 10;
-            border-bottom: 1px solid rgba(32, 33, 36, 0.08);
-            background: rgba(247, 247, 244, 0.92);
+            border-bottom: 1px solid var(--line);
+            background: rgba(251, 251, 250, 0.92);
             backdrop-filter: blur(14px);
         }
 
@@ -102,9 +105,10 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            max-width: 1180px;
+            width: 100%;
+            max-width: 1080px;
             margin: 0 auto;
-            padding: 14px 28px;
+            padding: 13px 24px;
         }
 
         .brand {
@@ -115,18 +119,19 @@
 
         .nav-links {
             display: flex;
-            gap: 18px;
+            gap: 16px;
             align-items: center;
-            font-size: 0.94rem;
+            font-size: 0.92rem;
         }
 
         .page {
             display: grid;
-            grid-template-columns: 300px minmax(0, 1fr);
-            gap: 44px;
-            max-width: 1180px;
+            grid-template-columns: 250px minmax(0, 1fr);
+            gap: 42px;
+            width: 100%;
+            max-width: 1080px;
             margin: 0 auto;
-            padding: 46px 28px 64px;
+            padding: 42px 24px 58px;
         }
 
         .profile {
@@ -136,46 +141,42 @@
         }
 
         .portrait {
-            display: grid;
-            place-items: center;
-            width: 160px;
-            height: 160px;
+            display: block;
+            width: 168px;
+            height: 168px;
             margin-bottom: 24px;
             border: 1px solid var(--line);
             border-radius: 50%;
-            background:
-                linear-gradient(135deg, rgba(36, 92, 138, 0.16), rgba(138, 75, 43, 0.16)),
-                var(--paper);
-            color: var(--accent-dark);
-            font-size: 3.1rem;
-            font-weight: 750;
+            background: var(--paper);
             box-shadow: var(--shadow);
+            object-fit: cover;
+            object-position: center 42%;
         }
 
         .profile h1 {
             margin: 0 0 6px;
-            font-size: 2.25rem;
+            font-size: 2.05rem;
             line-height: 1.1;
         }
 
         .role {
             margin: 0 0 16px;
             color: var(--muted);
-            font-size: 1.02rem;
+            font-size: 0.98rem;
         }
 
         .profile-meta {
             display: grid;
-            gap: 7px;
+            gap: 6px;
             margin: 18px 0 22px;
             color: var(--muted);
-            font-size: 0.95rem;
+            font-size: 0.93rem;
         }
 
         .profile-actions {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
+            gap: 8px;
             margin-bottom: 24px;
         }
 
@@ -183,16 +184,15 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            min-height: 38px;
-            padding: 8px 13px;
+            min-height: 36px;
+            padding: 7px 12px;
             border: 1px solid var(--line);
             border-radius: 6px;
             background: var(--paper);
             color: var(--ink);
-            font-size: 0.92rem;
+            font-size: 0.9rem;
             font-weight: 650;
             text-decoration: none;
-            box-shadow: 0 8px 18px rgba(26, 34, 44, 0.05);
         }
 
         .button:hover {
@@ -221,10 +221,10 @@
         .tag {
             border: 1px solid var(--line);
             border-radius: 999px;
-            background: rgba(255, 255, 255, 0.74);
+            background: transparent;
             color: #38424c;
-            padding: 5px 10px;
-            font-size: 0.83rem;
+            padding: 4px 9px;
+            font-size: 0.81rem;
             line-height: 1.25;
         }
 
@@ -232,14 +232,24 @@
             min-width: 0;
         }
 
+        .profile,
+        .intro,
+        .section,
+        .news-item,
+        .paper,
+        .featured,
+        .item {
+            min-width: 0;
+        }
+
         .intro {
-            padding: 34px 0 18px;
+            padding: 18px 0 28px;
             border-bottom: 1px solid var(--line);
         }
 
         .kicker {
             margin: 0 0 10px;
-            color: var(--green);
+            color: var(--accent);
             font-size: 0.82rem;
             font-weight: 750;
             letter-spacing: 0.08em;
@@ -249,20 +259,20 @@
         .intro h2 {
             max-width: 800px;
             margin: 0;
-            font-size: 2.32rem;
+            font-size: 1.82rem;
             line-height: 1.18;
             letter-spacing: 0;
         }
 
         .intro p {
             max-width: 760px;
-            margin: 18px 0 0;
+            margin: 14px 0 0;
             color: var(--muted);
-            font-size: 1.06rem;
+            font-size: 1rem;
         }
 
         .section {
-            padding: 34px 0;
+            padding: 30px 0;
             border-bottom: 1px solid var(--line);
         }
 
@@ -271,12 +281,12 @@
             align-items: baseline;
             justify-content: space-between;
             gap: 18px;
-            margin-bottom: 18px;
+            margin-bottom: 16px;
         }
 
         .section-title h2 {
             margin: 0;
-            font-size: 1.35rem;
+            font-size: 1.24rem;
             letter-spacing: 0;
         }
 
@@ -287,35 +297,31 @@
 
         .featured {
             display: grid;
-            grid-template-columns: minmax(260px, 0.86fr) 1fr;
-            gap: 24px;
-            align-items: center;
-            padding: 18px;
-            border: 1px solid var(--line);
-            border-radius: 8px;
-            background: var(--paper);
-            box-shadow: var(--shadow);
+            grid-template-columns: 190px minmax(0, 1fr);
+            gap: 20px;
+            align-items: start;
+            padding: 0;
         }
 
         .featured img {
             display: block;
             width: 100%;
-            aspect-ratio: 16 / 10;
+            aspect-ratio: 4 / 3;
             object-fit: cover;
             border-radius: 6px;
-            border: 1px solid rgba(32, 33, 36, 0.08);
+            border: 1px solid var(--line);
             background: #eeeeea;
         }
 
         .featured h3 {
             margin: 0 0 8px;
-            font-size: 1.24rem;
+            font-size: 1.14rem;
             line-height: 1.28;
         }
 
         .venue {
             margin: 0 0 8px;
-            color: var(--warm);
+            color: var(--accent-dark);
             font-weight: 700;
         }
 
@@ -348,9 +354,9 @@
 
         .news-item {
             display: grid;
-            grid-template-columns: 112px minmax(0, 1fr);
-            gap: 18px;
-            padding: 11px 0;
+            grid-template-columns: 118px minmax(0, 1fr);
+            gap: 16px;
+            padding: 8px 0;
         }
 
         .news-item time {
@@ -366,9 +372,9 @@
 
         .paper {
             display: grid;
-            grid-template-columns: 112px minmax(0, 1fr);
+            grid-template-columns: 92px minmax(0, 1fr);
             gap: 18px;
-            padding: 18px 0;
+            padding: 15px 0;
         }
 
         .paper + .paper {
@@ -411,10 +417,14 @@
         }
 
         .item {
-            padding: 16px;
-            border: 1px solid var(--line);
-            border-radius: 8px;
-            background: rgba(255, 255, 255, 0.68);
+            padding: 0 0 14px;
+            border-bottom: 1px solid var(--line);
+            background: transparent;
+        }
+
+        .timeline .item:last-child,
+        .service-grid .item:last-child {
+            border-bottom: 0;
         }
 
         .item h3 {
@@ -529,7 +539,34 @@
             }
 
             .page {
+                width: min(100vw, 390px);
+                max-width: min(100vw, 390px);
+                margin: 0;
                 padding: 30px 18px 48px;
+                overflow: hidden;
+            }
+
+            main,
+            .profile,
+            .profile-meta,
+            .profile-actions,
+            .tags,
+            .intro,
+            .intro h2,
+            .intro p,
+            .section,
+            .news-list,
+            .news-item,
+            .news-item p,
+            .paper-list,
+            .timeline,
+            .two-col {
+                width: 100%;
+                max-width: min(calc(100vw - 36px), 354px);
+            }
+
+            .tag {
+                max-width: 100%;
             }
 
             .profile {
@@ -552,7 +589,16 @@
             }
 
             .intro h2 {
-                font-size: 1.58rem;
+                font-size: 1.5rem;
+            }
+
+            .intro p,
+            .news-item p,
+            .paper p,
+            .summary,
+            .authors,
+            .item p {
+                overflow-wrap: break-word;
             }
 
             .section-title {
@@ -600,10 +646,11 @@
 
     <div class="page">
         <aside class="profile" aria-label="Profile">
-            <div class="portrait" aria-hidden="true">BX</div>
+            <img class="portrait" src="assets/bowen_xue_portrait.jpg" alt="Portrait of Bowen Xue">
             <h1>Bowen Xue</h1>
             <p class="role">Ph.D. Candidate in Computer Science<br>University of Manchester</p>
             <div class="profile-meta">
+                <span>Research Intern, NVIDIA</span>
                 <span>Computer Graphics and Neural Rendering</span>
                 <span>Manchester, United Kingdom</span>
                 <a href="mailto:bowen.xue@postgrad.manchester.ac.uk">bowen.xue@postgrad.manchester.ac.uk</a>
@@ -637,6 +684,10 @@
                     <span>Recent updates</span>
                 </div>
                 <div class="news-list">
+                    <div class="news-item">
+                        <time datetime="2026-05-04">May 4, 2026</time>
+                        <p>Started a research internship at NVIDIA; Motion Aware Video Generation Model was accepted to ICML 2026.</p>
+                    </div>
                     <div class="news-item">
                         <time datetime="2026-04">Apr 2026</time>
                         <p>Launched the VideoNeuMat project page and personal academic homepage.</p>
@@ -702,7 +753,7 @@
                         <div>
                             <h3>Motion Aware Video Generation Model</h3>
                             <p>Bowen Xue, Giuseppe Claudio Guarnera, Shuang Zhao, Zahra Montazeri</p>
-                            <p><strong>arXiv preprint</strong></p>
+                            <p><strong>ICML 2026</strong></p>
                             <div class="links">
                                 <a href="https://arxiv.org/abs/2506.02244" target="_blank" rel="noopener">Paper</a>
                             </div>
@@ -756,6 +807,11 @@
                 </div>
                 <div class="timeline">
                     <article class="item">
+                        <h3>NVIDIA</h3>
+                        <p class="item-date">May 2026 - Present</p>
+                        <p>Research intern working on graphics, neural rendering, and generative models.</p>
+                    </article>
+                    <article class="item">
                         <h3>Lumirithmic, London</h3>
                         <p class="item-date">Apr 2025 - Apr 2026</p>
                         <p>Research intern on facial subsurface scattering, Monte Carlo rendering, and diffusion-based inverse modeling.</p>
@@ -808,7 +864,7 @@
                         </article>
                     </div>
                 </div>
-                <p class="note">Last updated: April 2026.</p>
+                <p class="note">Last updated: May 2026.</p>
             </section>
 
             <footer>
